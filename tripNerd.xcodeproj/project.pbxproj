@@ -56,7 +56,6 @@
 			children = (
 				07B3FFB7205A12C900E1571B /* Services */,
 				07B3FFB3205A122A00E1571B /* Model */,
-				07B3FFA1205A11FA00E1571B /* AppDelegate.swift */,
 				07B3FFB4205A123600E1571B /* Views */,
 				07B3FFB5205A125700E1571B /* Controller */,
 				07B3FFAA205A11FB00E1571B /* LaunchScreen.storyboard */,
@@ -91,6 +90,7 @@
 		07B3FFB6205A128700E1571B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				07B3FFA1205A11FA00E1571B /* AppDelegate.swift */,
 				07B3FFA8205A11FB00E1571B /* Assets.xcassets */,
 				07B3FFAD205A11FB00E1571B /* Info.plist */,
 			);
