@@ -7,19 +7,31 @@
 //
 
 import UIKit
+import Parse
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+       
+    
+        let patientRecords = PFObject(className: "PatientRecords")
+        
+        patientRecords["name"] = "Eric"
+        patientRecords["address"] = "96 Stillmeadown lane"
+        patientRecords["balance"] = 100
+        
+        patientRecords.saveInBackground { (success, error) in
+            if error == nil {
+                print("record saved")
+            } else {
+                print(error!)
+            }
+        }
+        
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
 }
 
