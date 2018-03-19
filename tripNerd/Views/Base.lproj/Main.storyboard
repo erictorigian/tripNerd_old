@@ -90,7 +90,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="sou-gx-xGi">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="postCell" id="sou-gx-xGi">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sou-gx-xGi" id="c41-80-g5g">
@@ -105,9 +105,14 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="tripNerd" id="0P4-Ah-h7J">
-                        <barButtonItem key="rightBarButtonItem" title="Settings" id="KWD-8m-6zs">
+                        <barButtonItem key="leftBarButtonItem" title="Settings" id="KWD-8m-6zs">
                             <connections>
                                 <action selector="settingButtonPressed:" destination="2Hh-b7-OMI" id="mcL-W3-5Fi"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="zMO-k4-K02">
+                            <connections>
+                                <action selector="addButtonPressed:" destination="2Hh-b7-OMI" id="PGG-lH-rzn"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
