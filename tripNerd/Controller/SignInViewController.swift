@@ -23,12 +23,15 @@ class SignInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
     }
    
     override func viewDidAppear(_ animated: Bool) {
-    
+        if PFUser.current() != nil {
+            self.performSegue(withIdentifier: "showMainView", sender: nil)
+        }
     }
-    
     
     //MARK: - IBActions
     @IBAction func logOnButtonPressed(_ sender: Any) {
