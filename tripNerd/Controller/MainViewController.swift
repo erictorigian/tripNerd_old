@@ -20,6 +20,9 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
         // Do any additional setup after loading the view.
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         let query = PFQuery(className: "Posts")
         
         query.findObjectsInBackground { (objects, error) in
@@ -31,11 +34,11 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 for object in posts {
                     self.postUpdates.append(object)
                 }
-             
+                
                 self.tableView.reloadData()
                 
-                }
             }
+        }
     }
 
     @IBAction func addPostButtonPressed(_ sender: Any) {

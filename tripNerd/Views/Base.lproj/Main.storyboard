@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -119,24 +120,31 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="postCell" rowHeight="43" id="5Du-B5-Z67">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="postCell" textLabel="hbh-65-4HZ" detailTextLabel="pAu-qE-Tya" rowHeight="43" style="IBUITableViewCellStyleSubtitle" id="5Du-B5-Z67">
                                         <rect key="frame" x="0.0" y="28" width="375" height="43"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5Du-B5-Z67" id="XV4-GY-13f">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="42.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Update Text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEy-ZJ-h0K">
-                                                    <rect key="frame" x="15" y="11" width="310" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hbh-65-4HZ">
+                                                    <rect key="frame" x="15" y="4" width="33.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pAu-qE-Tya">
+                                                    <rect key="frame" x="15" y="24.5" width="44" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="iUT-PB-UeK" kind="showDetail" id="82h-UB-kff"/>
+                                            <segue destination="AWx-he-Gv5" kind="show" id="LgQ-Sz-urP"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -154,7 +162,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Kbc-Zx-DdS">
                             <connections>
                                 <action selector="addPostButtonPressed:" destination="CCZ-Vk-EFB" id="fGy-pT-RaJ"/>
-                                <segue destination="AWx-he-Gv5" kind="show" id="hp6-wn-ETe"/>
+                                <segue destination="iUT-PB-UeK" kind="show" id="Kqp-w3-ZUS"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -169,24 +177,60 @@
         <!--New Post-->
         <scene sceneID="CaL-SL-WKK">
             <objects>
-                <viewController title="New Post" id="iUT-PB-UeK" sceneMemberID="viewController">
+                <viewController title="New Post" id="iUT-PB-UeK" customClass="NewPostViewController" customModule="tripNerd" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="atR-vR-iea">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uhb-1D-7aM">
+                                <rect key="frame" x="16" y="-227" width="343" height="568"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type your status update" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oD4-3I-OXr">
+                                <rect key="frame" x="16" y="357" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gx2-sJ-dEf">
+                                <rect key="frame" x="172" y="395" width="31" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Post">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="PostButtonPressed:" destination="iUT-PB-UeK" eventType="touchUpInside" id="rQM-j6-Kqz"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="oD4-3I-OXr" secondAttribute="bottom" constant="280" id="3RR-TF-4RV"/>
+                            <constraint firstItem="oD4-3I-OXr" firstAttribute="leading" secondItem="atR-vR-iea" secondAttribute="leadingMargin" id="7nX-DF-3SP"/>
+                            <constraint firstItem="oD4-3I-OXr" firstAttribute="leading" secondItem="uhb-1D-7aM" secondAttribute="leading" id="8oa-QK-Efi"/>
+                            <constraint firstItem="Gx2-sJ-dEf" firstAttribute="top" secondItem="oD4-3I-OXr" secondAttribute="bottom" constant="8" id="CCb-vU-yhH"/>
+                            <constraint firstItem="oD4-3I-OXr" firstAttribute="top" secondItem="uhb-1D-7aM" secondAttribute="bottom" constant="16" id="RBa-GV-PV9"/>
+                            <constraint firstItem="Gx2-sJ-dEf" firstAttribute="centerX" secondItem="oD4-3I-OXr" secondAttribute="centerX" id="el8-E5-2Wq"/>
+                            <constraint firstItem="oD4-3I-OXr" firstAttribute="trailing" secondItem="uhb-1D-7aM" secondAttribute="trailing" id="fda-I2-cgE"/>
+                            <constraint firstItem="uhb-1D-7aM" firstAttribute="centerX" secondItem="atR-vR-iea" secondAttribute="centerX" id="y5T-jM-dWZ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="W4Z-C5-W9J"/>
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="imageView" destination="uhb-1D-7aM" id="nZT-HH-3xp"/>
+                        <outlet property="statusTextField" destination="oD4-3I-OXr" id="XWz-p1-5qy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IHX-By-tpM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1905" y="-99"/>
+            <point key="canvasLocation" x="1777" y="-765"/>
         </scene>
-        <!--View Controller-->
+        <!--Post Details-->
         <scene sceneID="cLZ-f5-3Id">
             <objects>
-                <viewController id="AWx-he-Gv5" sceneMemberID="viewController">
+                <viewController title="Post Details" id="AWx-he-Gv5" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DrR-uq-ES6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -196,7 +240,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mT4-Ob-KaD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1743" y="673"/>
+            <point key="canvasLocation" x="1777" y="123"/>
         </scene>
         <!--Settings-->
         <scene sceneID="dgZ-tM-6wl">

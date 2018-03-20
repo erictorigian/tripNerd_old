@@ -10,6 +10,7 @@
 		071C9D7620600EBF0083A1FF /* signUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071C9D7520600EBF0083A1FF /* signUpViewController.swift */; };
 		073968BC2061751E00D2ED81 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073968BB2061751E00D2ED81 /* MainViewController.swift */; };
 		073968BE20617C0300D2ED81 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073968BD20617C0300D2ED81 /* UserViewController.swift */; };
+		073968C020618CA400D2ED81 /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073968BF20618CA400D2ED81 /* NewPostViewController.swift */; };
 		078708CC205A1510008290BF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 078708CB205A150F008290BF /* Default-568h@2x.png */; };
 		07B3FFA2205A11FA00E1571B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B3FFA1205A11FA00E1571B /* AppDelegate.swift */; };
 		07B3FFA4205A11FA00E1571B /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B3FFA3205A11FA00E1571B /* SignInViewController.swift */; };
@@ -23,6 +24,7 @@
 		071C9D7520600EBF0083A1FF /* signUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpViewController.swift; sourceTree = "<group>"; };
 		073968BB2061751E00D2ED81 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		073968BD20617C0300D2ED81 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		073968BF20618CA400D2ED81 /* NewPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
 		078708CB205A150F008290BF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		07B3FF9E205A11FA00E1571B /* tripNerd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tripNerd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07B3FFA1205A11FA00E1571B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				071C9D7520600EBF0083A1FF /* signUpViewController.swift */,
 				073968BB2061751E00D2ED81 /* MainViewController.swift */,
 				073968BD20617C0300D2ED81 /* UserViewController.swift */,
+				073968BF20618CA400D2ED81 /* NewPostViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				07B3FFA2205A11FA00E1571B /* AppDelegate.swift in Sources */,
 				071C9D7620600EBF0083A1FF /* signUpViewController.swift in Sources */,
 				073968BC2061751E00D2ED81 /* MainViewController.swift in Sources */,
+				073968C020618CA400D2ED81 /* NewPostViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
