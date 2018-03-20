@@ -168,6 +168,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="FyT-Un-RKS" id="GWb-La-Kld"/>
+                        <segue destination="CKW-yA-2NL" kind="show" identifier="backToLogin" id="MQW-kf-upW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="azm-An-aTx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -182,18 +183,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uhb-1D-7aM">
-                                <rect key="frame" x="16" y="-227" width="343" height="568"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uhb-1D-7aM">
+                                <rect key="frame" x="41" y="78" width="292" height="196"/>
                                 <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type your status update" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oD4-3I-OXr">
-                                <rect key="frame" x="16" y="357" width="343" height="30"/>
+                                <rect key="frame" x="8" y="297" width="351" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gx2-sJ-dEf">
-                                <rect key="frame" x="172" y="395" width="31" height="30"/>
+                                <rect key="frame" x="149" y="335" width="70" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Post">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -205,14 +206,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="oD4-3I-OXr" secondAttribute="bottom" constant="280" id="3RR-TF-4RV"/>
-                            <constraint firstItem="oD4-3I-OXr" firstAttribute="leading" secondItem="atR-vR-iea" secondAttribute="leadingMargin" id="7nX-DF-3SP"/>
-                            <constraint firstItem="oD4-3I-OXr" firstAttribute="leading" secondItem="uhb-1D-7aM" secondAttribute="leading" id="8oa-QK-Efi"/>
+                            <constraint firstAttribute="bottom" secondItem="oD4-3I-OXr" secondAttribute="bottom" constant="340" id="3RR-TF-4RV"/>
+                            <constraint firstItem="oD4-3I-OXr" firstAttribute="leading" secondItem="atR-vR-iea" secondAttribute="leadingMargin" constant="-8" id="7nX-DF-3SP"/>
                             <constraint firstItem="Gx2-sJ-dEf" firstAttribute="top" secondItem="oD4-3I-OXr" secondAttribute="bottom" constant="8" id="CCb-vU-yhH"/>
-                            <constraint firstItem="oD4-3I-OXr" firstAttribute="top" secondItem="uhb-1D-7aM" secondAttribute="bottom" constant="16" id="RBa-GV-PV9"/>
+                            <constraint firstItem="uhb-1D-7aM" firstAttribute="top" secondItem="W4Z-C5-W9J" secondAttribute="top" constant="14" id="QqZ-3D-xDv"/>
+                            <constraint firstItem="oD4-3I-OXr" firstAttribute="top" secondItem="uhb-1D-7aM" secondAttribute="bottom" constant="23" id="TOc-Nq-5c3"/>
+                            <constraint firstItem="uhb-1D-7aM" firstAttribute="leading" secondItem="W4Z-C5-W9J" secondAttribute="leading" constant="41" id="VEF-ek-npK"/>
+                            <constraint firstItem="uhb-1D-7aM" firstAttribute="centerX" secondItem="atR-vR-iea" secondAttribute="centerX" id="Y2e-PU-hAu"/>
                             <constraint firstItem="Gx2-sJ-dEf" firstAttribute="centerX" secondItem="oD4-3I-OXr" secondAttribute="centerX" id="el8-E5-2Wq"/>
-                            <constraint firstItem="oD4-3I-OXr" firstAttribute="trailing" secondItem="uhb-1D-7aM" secondAttribute="trailing" id="fda-I2-cgE"/>
-                            <constraint firstItem="uhb-1D-7aM" firstAttribute="centerX" secondItem="atR-vR-iea" secondAttribute="centerX" id="y5T-jM-dWZ"/>
+                            <constraint firstItem="Gx2-sJ-dEf" firstAttribute="leading" secondItem="W4Z-C5-W9J" secondAttribute="leading" constant="149" id="fPc-CZ-XEc"/>
+                            <constraint firstItem="oD4-3I-OXr" firstAttribute="trailing" secondItem="atR-vR-iea" secondAttribute="trailingMargin" id="pah-iD-4Vu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="W4Z-C5-W9J"/>
                     </view>
@@ -225,7 +228,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IHX-By-tpM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1777" y="-765"/>
+            <point key="canvasLocation" x="1776.8" y="-765.06746626686663"/>
         </scene>
         <!--Post Details-->
         <scene sceneID="cLZ-f5-3Id">
@@ -395,4 +398,7 @@
             <point key="canvasLocation" x="39" y="-99"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="MQW-kf-upW"/>
+    </inferredMetricsTieBreakers>
 </document>

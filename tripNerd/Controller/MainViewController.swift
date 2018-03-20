@@ -48,6 +48,9 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
 
     @IBAction func logoutButtonPressed(_ sender: Any) {
+        PFUser.logOut()
+        self.navigationController?.isNavigationBarHidden = true
+        self.performSegue(withIdentifier: "backToLogin", sender: nil)
     }
 
     @IBAction func userButtonPressed(_ sender: Any) {
