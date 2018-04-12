@@ -1,0 +1,6 @@
+framework module Pods_tripNerd {
+  umbrella header "Pods-tripNerd-umbrella.h"
+
+  export *
+  module * { export * }
+}
